@@ -10,8 +10,7 @@ before_install:
 - npm install -g typescript
 script:
 - tsc
-#- npm run test-travis
-- mocha test/integration/test.visual_recognition.js -g 'authentication'
+- npm run test-travis
 - sh scripts/typedoc/generate_typedoc.sh
 after_success:
 - npm run report-coverage
